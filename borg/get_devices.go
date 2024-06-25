@@ -18,7 +18,7 @@ type Device struct {
 }
 
 func GetDevices(c *http.Client, headers map[string]string) ([]Device, error) {
-	req, _ := http.NewRequest("GET", "http://case.borg.formlabs.cloud/api/v1/devices/", nil)
+	req, _ := http.NewRequest("GET", "https://case.factory.priv.prod.gcp.formlabs.cloud/api/v1/devices/", nil)
 	for k, v := range headers {
 		req.Header.Set(k, v)
 	}
