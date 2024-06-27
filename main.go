@@ -13,6 +13,7 @@ import (
 )
 
 const BEARER = "81ebcb62699d5cd7a4b8fd0f0ffb012b962ab5ec"
+const TIMEOUT_SECONDS = 4
 
 func main() {
 	err := clipboard.Init()
@@ -21,7 +22,7 @@ func main() {
 		panic(err)
 	}
 
-	client := &http.Client{Timeout: 2 * time.Second}
+	client := &http.Client{Timeout: TIMEOUT_SECONDS * time.Second}
 	headers := map[string]string{
 		"Authorization": "Bearer " + BEARER,
 	}
