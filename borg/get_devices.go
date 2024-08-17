@@ -28,6 +28,8 @@ func GetDevices(c *http.Client, headers map[string]string) ([]Device, error) {
 		fmt.Printf("Borg is unreachable, make sure you are in Formlabs WIFI or connected to VPN!\nError: %s\n", err)
 		return nil, err
 	}
+	defer resp.Body.Close()
+
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		slog.Error("Error during parsing response", slog.Any("error", err))
