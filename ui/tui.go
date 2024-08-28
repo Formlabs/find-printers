@@ -2,13 +2,14 @@ package ui
 
 import (
 	"find-printers/borg"
+	"log"
+	"strings"
+
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 	"github.com/evertras/bubble-table/table"
 	"golang.design/x/clipboard"
-	"log"
-	"strings"
 )
 
 const (
@@ -183,15 +184,6 @@ func sortDirectionToAscii(d string) string {
 
 func (m Model) View() string {
 	body := strings.Builder{}
-
-	view := lipgloss.JoinVertical(
-		lipgloss.Left,
-		styleHighlight.Render("Press q or ctrl+c to quit - Sorted by # Conversations"),
-		styleHighlight.Render("Highlighted: "),
-		styleHighlight.Render("https://www.nintendolife.com/news/2021/11/these-are-the-most-loved-and-most-hated-pokemon-according-to-a-new-study"),
-		m.scrollableTable.View(),
-	) + "\n"
-	lipgloss.NewStyle().MarginLeft(1).Render(view)
 
 	h := func(s string) string { return styleHighlight.Render(s) }
 	body.WriteString("Press " + h("q") + " or " + h("ctrl+c") + " to quit")
