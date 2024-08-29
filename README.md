@@ -51,7 +51,7 @@ Since the tool has no knowledge of Borg secrets, it requires to first setup a Bo
 
 Install `find-printers`:
 ```
-$ go install github.com/FormJani/find-printers@latest
+$ go install github.com/Formlabs/find-printers@latest
 ```
 
 Setup the token:
