@@ -31,6 +31,7 @@
     </li>
     <li><a href="#development">Development</a></li>
     <li><a href="#project-structure">Project Structure</a></li>
+    <li><a href="#known-issues">Known Issues</a></li>
   </ol>
 </details>
 
@@ -42,12 +43,12 @@
 ![image](https://github.com/user-attachments/assets/3a210419-f1d4-4529-a94f-31552d916ee8)
 
 
-`find-printers` is a small TUI / CLI tool build on top of Borg API to query printer information including IP, SerialName, MachineType and Firmware Version. All of this can be quickly copied with shortcuts.
+`find-printers` is a small TUI / CLI tool build on top of [CASE](https://case.factory.priv.prod.gcp.formlabs.cloud/) API to query printer information including IP, SerialName, MachineType and Firmware Version. All of this can be quickly copied with shortcuts.
 
 
 ## Getting Started
 
-Since the tool has no knowledge of Borg secrets, it requires to first setup a Borg authentication token. The token can be aquired from Borg UI.
+Since the tool has no knowledge of Borg secrets, it requires to first setup a Borg / CASE authentication token. The token can be aquired from [Borg / CASE UI](https://case.factory.priv.prod.gcp.formlabs.cloud/).
 
 Install `find-printers`:
 ```
@@ -97,3 +98,8 @@ make run        - runs the tool locally
 ├── main.go        - entrypoint
 └── ui/            - code for the TUI to display information
 ```
+```
+
+## Known issues
+Since the data depends on Borg data as a source, it automatically inherits all problems that Borg has.
+It can sometimes show outdated data, or missing some printers from the list. Overall I find it pretty reliable, but had some cases where the printers were missing from the datasource.
