@@ -1,4 +1,8 @@
 build:
-	go build -o find-printers
+	@go build -o find-printers
+
 install: build
-	sudo mv find-printers /usr/local/bin/find-printers
+	@go install .
+
+run:
+	@go run main.go
