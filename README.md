@@ -48,7 +48,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![find-printers](./images/find-printers-screenshot.png)
+![image](https://github.com/user-attachments/assets/3a210419-f1d4-4529-a94f-31552d916ee8)
+
 
 `find-printers` is a small TUI / CLI tool build on top of Borg API to query printer information including IP, SerialName, MachineType and Firmware Version. All of this can be quickly copied with shortcuts.
 
