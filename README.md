@@ -47,13 +47,15 @@
 
 
 ## Getting Started
-
-Since the tool has no knowledge of Borg secrets, it requires to first setup a Borg / CASE authentication token. The token can be aquired from [Borg / CASE UI](https://case.factory.priv.prod.gcp.formlabs.cloud/).
+This section assumes you have Go 1.21 or higher runtime installed already, and accessible from command line by `go` command.
+To install go you can [follow golang docs](https://go.dev/doc/install).
 
 Install `find-printers`:
 ```
 $ go install github.com/Formlabs/find-printers@latest
 ```
+
+Since the tool has no knowledge of Borg secrets, it requires to first setup a Borg / CASE authentication token. The token can be aquired from [Borg / CASE UI](https://case.factory.priv.prod.gcp.formlabs.cloud/).
 
 Setup the token:
 ```
