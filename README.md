@@ -56,6 +56,10 @@ $ go install github.com/Formlabs/find-printers@latest
 ```
 
 Since the tool has no knowledge of Borg secrets, it requires to first setup a Borg / CASE authentication token. The token can be aquired from [Borg / CASE UI](https://case.factory.priv.prod.gcp.formlabs.cloud/).
+<details>
+  <summary>Aquiring a CASE token </summary>
+  <img src="./images/getting-borg-token.gif"/>
+</details>
 
 Setup the token:
 ```
