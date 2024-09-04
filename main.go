@@ -1,13 +1,14 @@
 package main
 
 import (
-	"find-printers/borg"
-	"find-printers/ui"
 	"fmt"
 	"net/http"
 	"os"
 	"sort"
 	"time"
+
+	"github.com/Formlabs/find-printers/borg"
+	"github.com/Formlabs/find-printers/ui"
 
 	"golang.design/x/clipboard"
 )
