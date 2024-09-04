@@ -1,4 +1,4 @@
-module find-printers
+module github.com/Formlabs/find-printers
 
 go 1.21
 
