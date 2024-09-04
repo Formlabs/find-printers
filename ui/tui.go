@@ -1,9 +1,10 @@
 package ui
 
 import (
-	"find-printers/borg"
 	"log"
 	"strings"
+
+	"github.com/Formlabs/find-printers/borg"
 
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
